@@ -189,6 +189,10 @@ const ModalDiv = styled.div`
         grid-template-columns: 2fr 5fr;
       }
 
+      @media ${props => props.theme.sm} {
+        grid-template-columns: 1fr 5fr;
+      }
+
       .social-icon {
         display: flex;
         justify-content: center;
@@ -278,6 +282,10 @@ const ModalDiv = styled.div`
 
       @media ${props => props.theme.md} {
         grid-template-columns: 2fr 1fr 2fr;
+      }
+
+      @media ${props => props.theme.sm} {
+        grid-template-columns: 3fr 1fr 3fr;
       }
 
       .or {

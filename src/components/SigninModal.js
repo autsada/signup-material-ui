@@ -163,6 +163,10 @@ const ModalDiv = styled.div`
         grid-template-columns: 2fr 5fr;
       }
 
+      @media ${props => props.theme.sm} {
+        grid-template-columns: 1fr 5fr;
+      }
+
       .social-icon {
         display: flex;
         justify-content: center;
@@ -247,6 +251,10 @@ const ModalDiv = styled.div`
 
       @media ${props => props.theme.md} {
         grid-template-columns: 2fr 1fr 2fr;
+      }
+
+      @media ${props => props.theme.sm} {
+        grid-template-columns: 3fr 1fr 3fr;
       }
 
       .or {
@@ -426,7 +434,6 @@ const SigninModal = () => {
         <div className='header'>
           <h2 className='header-text'>Sign in to Cloudicity</h2>
         </div>
-
         <div className='social-media-container fb-container'>
           <div className='social-media'>
             <div className='social-icon fb-icon'>
@@ -438,7 +445,6 @@ const SigninModal = () => {
             <div className='social-word fb-word'>Sign in with Facebook</div>
           </div>
         </div>
-
         <div className='social-media-container google-container'>
           <div className='social-media'>
             <div className='social-icon google-icon'>
