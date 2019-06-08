@@ -26,11 +26,11 @@ const useStyles = makeStyles(theme => ({
       borderWidth: '0.6px' //default
     },
     '&:hover:not($disabled):not($cssFocused):not($error) $notchedOutline': {
-      borderWidth: '1.5px',
+      borderWidth: '1px',
       borderColor: `${theme.darkTeal}` //hovered
     },
     '&$cssFocused $notchedOutline': {
-      borderWidth: '1.5px',
+      borderWidth: '1px',
       borderColor: `${theme.darkTeal}` //focused
     }
   },

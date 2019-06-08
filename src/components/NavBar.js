@@ -26,17 +26,16 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const NavBarStyle = styled(AppBar)`
+  display: block;
+  text-align: center;
   background: ${props => props.theme.teal};
   height: 8rem;
-
-  .MuiToolbar-regular {
-    min-height: 0;
-  }
 
   .nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 
     .logo {
       margin: 0;
@@ -81,6 +80,10 @@ const NavBarStyle = styled(AppBar)`
 
   @media ${props => props.theme.sm} {
     height: 5rem;
+
+    .MuiToolbar-regular {
+      min-height: 0;
+    }
 
     button {
       margin: 0 0.3rem;
