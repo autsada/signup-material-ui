@@ -128,6 +128,7 @@ const ModalDiv = styled.div`
 
       @media ${props => props.theme.sm} {
         font-size: 2.2rem;
+        margin-top: 1rem;
       }
     }
 
@@ -311,17 +312,25 @@ const ModalDiv = styled.div`
       }
     }
 
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+      -webkit-text-fill-color: ${props => props.theme.black} !important;
+    }
+
     .space {
       height: 2rem;
 
       @media ${props => props.theme.sm} {
         height: 1rem;
+        margin-bottom: 1rem;
       }
 
       .error-text {
         color: red;
         margin: 0 1rem;
-        margin-top: 5px;
         font-size: 1.2rem;
       }
     }
@@ -338,7 +347,7 @@ const ModalDiv = styled.div`
       background: ${props => props.theme.teal};
 
       @media ${props => props.theme.sm} {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         height: 4rem;
       }
 
@@ -444,6 +453,7 @@ const SignupModal = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             required={true}
+            error={!!errors.email}
             fullWidth
             variant='outlined'
             InputProps={{
@@ -471,6 +481,7 @@ const SignupModal = () => {
             onBlur={handleBlur}
             type='password'
             required={true}
+            error={errors.password && errors.password.length > 0}
             style={{
               borderColor: 'red'
               // errors.password && `${props => props.theme.red}`
@@ -510,6 +521,7 @@ const SignupModal = () => {
             onBlur={handleBlur}
             type='password'
             required={true}
+            error={!!errors.confirmPassword}
             fullWidth
             margin='normal'
             variant='outlined'

@@ -128,6 +128,7 @@ const ModalDiv = styled.div`
 
       @media ${props => props.theme.sm} {
         font-size: 2.2rem;
+        margin-top: 1rem;
       }
     }
   }
@@ -281,11 +282,20 @@ const ModalDiv = styled.div`
       }
     }
 
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 5000s ease-in-out 0s;
+      -webkit-text-fill-color: ${props => props.theme.black} !important;
+    }
+
     .space {
       height: 2rem;
 
       @media ${props => props.theme.sm} {
         height: 1rem;
+        margin-bottom: 1rem;
       }
 
       .error-text {
@@ -340,6 +350,14 @@ const ModalDiv = styled.div`
             color: ${props => props.theme.darkTeal};
           }
         }
+
+        @media ${props => props.theme.md} {
+          font-size: 1.4rem;
+        }
+
+        @media ${props => props.theme.sm} {
+          font-size: 1.1rem;
+        }
       }
 
       .goto-signup {
@@ -350,6 +368,14 @@ const ModalDiv = styled.div`
           &:hover {
             color: ${props => props.theme.darkTeal};
           }
+        }
+
+        @media ${props => props.theme.md} {
+          font-size: 1.4rem;
+        }
+
+        @media ${props => props.theme.sm} {
+          font-size: 1.1rem;
         }
       }
     }
@@ -430,6 +456,7 @@ const SigninModal = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             required={true}
+            error={!!errors.email}
             fullWidth
             variant='outlined'
             InputProps={{
