@@ -16,7 +16,8 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
       margin: 0;
       font-size: 1.6rem;
-      font-family: ${props => props.theme.typography.fontFamily}
+      font-family: ${props => props.theme.typography.fontFamily};
+      font-weight: 400;
    }
 `
 

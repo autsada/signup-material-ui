@@ -342,6 +342,9 @@ const ModalDiv = styled.div`
       margin-left: 1rem;
 
       .forgot-password {
+        font-size: 1.6rem;
+        color: ${props => props.theme.grey};
+
         span {
           color: ${props => props.theme.orange};
           cursor: pointer;
@@ -361,6 +364,9 @@ const ModalDiv = styled.div`
       }
 
       .goto-signup {
+        font-size: 1.6rem;
+        color: ${props => props.theme.grey};
+
         span {
           color: ${props => props.theme.orange};
           cursor: pointer;
@@ -518,15 +524,15 @@ const SigninModal = () => {
           </div>
           <div className='signin-helper'>
             <div className='forgot-password'>
-              <h4>
+              <p>
                 Forgot your Password? <span>Click</span>
-              </h4>
+              </p>
             </div>
             <div className='goto-signup'>
-              <h4>
+              <p>
                 Don't have an account?{' '}
                 <span onClick={gotoSignup}>Sign up instead.</span>
-              </h4>
+              </p>
             </div>
           </div>
         </form>
