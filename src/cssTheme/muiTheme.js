@@ -4,6 +4,11 @@ import { myTheme } from './myTheme'
 
 export const muiTheme = createMuiTheme({
   overrides: {
+    MuiIconButton: {
+      root: {
+        padding: '0'
+      }
+    },
     MuiInputLabel: {
       root: {
         fontSize: '12px',
@@ -33,9 +38,17 @@ export const muiTheme = createMuiTheme({
         fontSize: '1.6rem',
         border: `0.8px solid ${myTheme.white};`,
         cursor: 'pointer',
+        margin: '0',
 
         '&:hover': {
           backgroundColor: `${myTheme.darkTeal}`
+        }
+      }
+    },
+    MuiToolbar: {
+      root: {
+        '@media (max-width: 600px)': {
+          height: '5rem'
         }
       }
     }

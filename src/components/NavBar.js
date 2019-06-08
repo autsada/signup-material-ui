@@ -30,13 +30,23 @@ const NavBarStyle = styled(AppBar)`
   height: 8rem;
 
   .MuiToolbar-regular {
-    height: 100%;
+    min-height: 0;
   }
 
   .nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .logo {
+      margin: 0;
+      padding: 0;
+
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+    }
 
     .menu-right {
       display: flex;
@@ -45,29 +55,36 @@ const NavBarStyle = styled(AppBar)`
 
       .sign-up-in {
         margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
     }
   }
 
   button {
     margin: 0 1rem;
+    border: 0.4px solid;
   }
 
   .menu-icon {
     display: none;
+    margin-left: 1rem;
+    border: none;
 
     .MuiSvgIcon-root {
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 3rem;
+      height: 3rem;
+      margin: 0;
     }
   }
 
   @media ${props => props.theme.sm} {
-    height: 6rem;
+    height: 5rem;
 
     button {
       margin: 0 0.3rem;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .menu-icon {
