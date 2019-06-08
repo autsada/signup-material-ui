@@ -159,6 +159,10 @@ const ModalDiv = styled.div`
       color: white;
       cursor: pointer;
 
+      @media ${props => props.theme.md} {
+        grid-template-columns: 2fr 5fr;
+      }
+
       .social-icon {
         display: flex;
         justify-content: center;
@@ -240,6 +244,10 @@ const ModalDiv = styled.div`
       margin: 0;
       display: grid;
       grid-template-columns: 3fr 1fr 3fr;
+
+      @media ${props => props.theme.md} {
+        grid-template-columns: 2fr 1fr 2fr;
+      }
 
       .or {
         text-align: center;

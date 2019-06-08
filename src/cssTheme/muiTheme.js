@@ -25,18 +25,13 @@ export const muiTheme = createMuiTheme({
       input: {
         background: 'white'
       }
-      // root: {
-      //   '&$error': {
-      //     border: '1px solid #FF5252'
-      //   }
-      // }
     },
     MuiButton: {
       root: {
         color: myTheme.white,
         background: myTheme.teal,
-        fontSize: '1.6rem',
-        border: `0.8px solid ${myTheme.white};`,
+        fontSize: '1.3rem',
+        border: `0.6px solid ${myTheme.white};`,
         cursor: 'pointer',
         margin: '0',
 

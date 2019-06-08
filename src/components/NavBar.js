@@ -1,16 +1,8 @@
 import React, { useContext } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  IconButton,
-  Button
-} from '@material-ui/core'
+import { AppBar, Toolbar, IconButton, Button } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import styled from 'styled-components'
-
-//import Button from './styles/ButtonStyle'
 import { LoggingContext } from './../hooks'
 
 const useStyles = makeStyles(theme => ({

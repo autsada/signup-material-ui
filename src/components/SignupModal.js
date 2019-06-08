@@ -173,7 +173,6 @@ const ModalDiv = styled.div`
 
     @media ${props => props.theme.sm} {
       height: 4rem;
-      /* margin-bottom: 2rem; */
       width: 80%;
     }
 
@@ -182,8 +181,13 @@ const ModalDiv = styled.div`
       height: 100%;
       display: grid;
       grid-template-columns: 1fr 5fr;
+      grid-gap: 0;
       color: white;
       cursor: pointer;
+
+      @media ${props => props.theme.md} {
+        grid-template-columns: 2fr 5fr;
+      }
 
       .social-icon {
         display: flex;
@@ -270,6 +274,11 @@ const ModalDiv = styled.div`
       margin: 0;
       display: grid;
       grid-template-columns: 3fr 1fr 3fr;
+      grid-gap: 0;
+
+      @media ${props => props.theme.md} {
+        grid-template-columns: 2fr 1fr 2fr;
+      }
 
       .or {
         text-align: center;
