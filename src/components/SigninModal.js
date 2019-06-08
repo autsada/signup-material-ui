@@ -530,8 +530,7 @@ const SigninModal = () => {
             </div>
             <div className='goto-signup'>
               <p>
-                Don't have an account?{' '}
-                <span onClick={gotoSignup}>Sign up instead.</span>
+                Don't have an account? <span onClick={gotoSignup}>Sign up</span>
               </p>
             </div>
           </div>
