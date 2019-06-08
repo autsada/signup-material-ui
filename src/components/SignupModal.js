@@ -71,29 +71,37 @@ const ModalDiv = styled.div`
   }
 
   .close {
-    position: absolute;
+    /* position: absolute;
     top: 0.5rem;
-    right: 1rem;
-    width: 3rem;
-    height: 3rem;
+    right: 1rem; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    font-size: 3rem;
-    color: ${props => props.theme.grey};
-    cursor: pointer;
-    border-radius: 50px;
-    transition: background-color ${props => props.theme.transitionDuration}
-      ease-in;
 
-    &:hover {
-      color: ${props => props.theme.black};
-      background: ${props => props.theme.lightgrey};
-    }
+    .close-left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      margin-top: 0.5rem;
+      margin-right: 1rem;
+      font-size: 3rem;
+      color: ${props => props.theme.grey};
+      cursor: pointer;
+      border-radius: 50px;
+      transition: background-color ${props => props.theme.transitionDuration}
+        ease-in;
 
-    @media ${props => props.theme.sm} {
-      font-size: 2rem;
-      right: 0.5rem;
+      &:hover {
+        color: ${props => props.theme.black};
+        background: ${props => props.theme.lightgrey};
+      }
+
+      @media ${props => props.theme.sm} {
+        font-size: 2rem;
+        right: 0.5rem;
+      }
     }
   }
 
@@ -182,16 +190,6 @@ const ModalDiv = styled.div`
         align-items: center;
         transition: background-color ${props => props.theme.transitionDuration}
           ease-in;
-
-        .icon-svg {
-          @media ${props => props.theme.md} {
-            font-size: 2.5rem;
-          }
-
-          @media ${props => props.theme.sm} {
-            font-size: 1.8rem;
-          }
-        }
       }
 
       .social-word {
@@ -222,8 +220,16 @@ const ModalDiv = styled.div`
     }
 
     .fb-icon {
-      font-size: 2.5rem;
       border-right: 1.5px solid ${props => props.theme.darkBlue};
+      font-size: 2.5rem;
+
+      @media ${props => props.theme.md} {
+        font-size: 2rem;
+      }
+
+      @media ${props => props.theme.sm} {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -235,8 +241,16 @@ const ModalDiv = styled.div`
     }
 
     .google-icon {
-      font-size: 2rem;
       border-right: 1.5px solid ${props => props.theme.darkRed};
+      font-size: 2rem;
+
+      @media ${props => props.theme.md} {
+        font-size: 1.8rem;
+      }
+
+      @media ${props => props.theme.sm} {
+        font-size: 1.3rem;
+      }
     }
   }
 
@@ -371,8 +385,10 @@ const SignupModal = () => {
   return (
     <OutSideClick onOutsideClick={handleClose}>
       <ModalDiv>
-        <div className='close' onClick={handleClose}>
-          &times;
+        <div className='close'>
+          <div className='close-left' onClick={handleClose}>
+            &times;
+          </div>
         </div>
         <div className='header'>
           <h2 className='header-text'>Create an Account</h2>
