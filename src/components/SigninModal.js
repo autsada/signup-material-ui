@@ -159,13 +159,13 @@ const ModalDiv = styled.div`
       color: white;
       cursor: pointer;
 
-      @media ${props => props.theme.md} {
+      /* @media ${props => props.theme.md} {
         grid-template-columns: 2fr 5fr;
       }
 
       @media ${props => props.theme.sm} {
         grid-template-columns: 1fr 5fr;
-      }
+      } */
 
       .social-icon {
         display: flex;
@@ -249,13 +249,13 @@ const ModalDiv = styled.div`
       display: grid;
       grid-template-columns: 3fr 1fr 3fr;
 
-      @media ${props => props.theme.md} {
+      /* @media ${props => props.theme.md} {
         grid-template-columns: 2fr 1fr 2fr;
       }
 
       @media ${props => props.theme.sm} {
         grid-template-columns: 3fr 1fr 3fr;
-      }
+      } */
 
       .or {
         text-align: center;
